@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173d32">
+
+  <title>Contact | 덕수파스타 순천</title>
+  <meta name="description" content="Contact Deoksu Pasta Suncheon. Find our restaurant address, phone number, and directions.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/contact.css" type="text/css">
+  <script src="css/js/contact.js" defer></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <a href="index.html" class="brand" aria-label="Restaurant home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 50 50" fill="none">
+          <circle cx="25" cy="25" r="23" stroke="currentColor" stroke-width="1.3"/>
+          <path d="M12 19H38M15 23H35M18 27H32" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M18 13C15 9 22 8 19 5M26 13C23 9 30 8 27 5M34 13C31 9 38 8 35 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <path d="M14 32C19 39 31 39 36 32" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </span>
+
+      <span class="brand-text">
+        <strong data-i18n="brandName">덕수파스타 순천</strong>
+        <small data-i18n="brandTagline">좋은 음식, 따뜻한 순간</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Open navigation" aria-expanded="false"
+      aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html" data-i18n="navHome">홈</a>
+      <a href="menu.html" data-i18n="navMenu">메뉴</a>
+      <a href="reservation.html" data-i18n="navReservation">예약</a>
+      <a href="about.html" data-i18n="navAbout">소개</a>
+      <a href="contact.html" class="active" aria-current="page" data-i18n="navContact">오시는 길</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="language-button" id="languageToggle" type="button"
+        aria-label="Switch language">
+        <span id="languageLabel">EN</span>
+        <span aria-hidden="true">◎</span>
+      </button>
+
+      <a href="reservation.html" class="header-reserve" data-i18n="bookTable">
+        예약하기
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+      <div class="hero-image" role="img" aria-label="Restaurant dining atmosphere"></div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <span class="eyebrow" data-i18n="heroEyebrow">VISIT · CALL · CONNECT</span>
+        <h1 data-i18n="heroTitle">찾아오시는 길,<br><em>언제나 환영합니다.</em></h1>
+        <p data-i18n="heroText">
+          궁금한 점이 있으신가요? 전화로 문의하시거나 매장 위치를 확인해 주세요.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="tel:+821041952232" class="gold-button" data-i18n="callNow">
+            전화 문의하기
+          </a>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=덕수파스타%20순천%20전라남도%20순천시%20왕지2길%2013-12"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hero-outline"
+            data-i18n="getDirections">
+            길찾기 ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact details -->
+    <section class="contact-section">
+      <div class="section-heading">
+        <span class="eyebrow dark-eyebrow" data-i18n="sectionEyebrow">WE'D LOVE TO WELCOME YOU</span>
+        <h2 data-i18n="sectionTitle">방문을 기다립니다</h2>
+        <p data-i18n="sectionText">
+          아래 정보를 확인하시고 편하게 연락해 주세요.
+        </p>
+      </div>
+
+      <div class="contact-layout">
+        <!-- Details -->
+        <div class="contact-details">
+          <article class="contact-card">
+            <div class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+            </div>
+
+            <div class="contact-card-content">
+              <span class="detail-label" data-i18n="addressLabel">ADDRESS · 주소</span>
+              <h3 data-i18n="addressTitle">매장 주소</h3>
+              <p class="korean-address">
+                전라남도 순천시 왕지2길 13-12 1층
+              </p>
+              <p class="english-address">
+                1F, 13-12 Wangji 2-gil, Suncheon-si,<br>
+                Jeollanam-do, South Korea
+              </p>
+
+              <a
+                class="detail-link"
+                href="https://www.google.com/maps/search/?api=1&query=덕수파스타%20순천%20전라남도%20순천시%20왕지2길%2013-12"
+                target="_blank"
+                rel="noopener noreferrer">
+                <span data-i18n="openMap">Google Maps에서 위치 보기</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="contact-card">
+            <div class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M7 3H4.5A1.5 1.5 0 0 0 3 4.5C3 13.6 10.4 21 19.5 21a1.5 1.5 0 0 0 1.5-1.5V17l-5-2-2 2a15 15 0 0 1-6.5-6.5l2-2L7 3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              </svg>
+            </div>
+
+            <div class="contact-card-content">
+              <span class="detail-label" data-i18n="phoneLabel">PHONE · 전화</span>
+              <h3 data-i18n="phoneTitle">전화 문의</h3>
+              <a class="phone-number" href="tel:+821041952232">
+                +82 10-4195-2232
+              </a>
+              <p data-i18n="phoneText">
+                예약이나 메뉴 관련 문의는 매장으로 전화해 주세요.
+              </p>
+              <a class="detail-link" href="tel:+821041952232">
+                <span data-i18n="callRestaurant">매장에 전화하기</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="contact-card">
+            <div class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+
+            <div class="contact-card-content">
+              <span class="detail-label" data-i18n="visitLabel">YOUR VISIT · 방문 안내</span>
+              <h3 data-i18n="visitTitle">방문 전 확인해 주세요</h3>
+              <p data-i18n="visitText">
+                영업시간과 좌석 이용 가능 여부는 방문 전에 전화로 확인해 주세요.
+              </p>
+              <span class="small-note" data-i18n="visitNote">
+                영업시간은 매장 확인 후 업데이트할 수 있습니다.
+              </span>
+            </div>
+          </article>
+        </div>
+
+        <!-- Map / Directions -->
+        <aside class="map-panel">
+          <div class="map-top">
+            <span class="map-pin" aria-hidden="true">⌖</span>
+            <div>
+              <span class="detail-label" data-i18n="findUsLabel">FIND US</span>
+              <h3 data-i18n="mapTitle">순천에서 만나요</h3>
+            </div>
+          </div>
+
+          <div class="map-visual">
+            <div class="map-grid-lines" aria-hidden="true"></div>
+            <div class="map-road road-one" aria-hidden="true"></div>
+            <div class="map-road road-two" aria-hidden="true"></div>
+            <div class="map-road road-three" aria-hidden="true"></div>
+            <div class="map-park" aria-hidden="true"></div>
+
+            <div class="map-marker">
+              <span class="marker-dot">食</span>
+              <span class="marker-label" data-i18n="brandName">덕수파스타 순천</span>
+            </div>
+
+            <span class="map-caption" data-i18n="mapCaption">
+              WANGJI 2-GIL · SUNCHEON
+            </span>
+          </div>
+
+          <div class="map-address">
+            <strong data-i18n="mapAddressTitle">덕수파스타 순천</strong>
+            <p>전라남도 순천시 왕지2길 13-12 1층</p>
+            <span>Suncheon-si, Jeollanam-do, South Korea</span>
+          </div>
+
+          <a
+            class="directions-button"
+            href="https://www.google.com/maps/search/?api=1&query=덕수파스타%20순천%20전라남도%20순천시%20왕지2길%2013-12"
+            target="_blank"
+            rel="noopener noreferrer">
+            <span data-i18n="directionsButton">Google Maps 길찾기</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <p class="map-disclaimer" data-i18n="mapDisclaimer">
+            지도 링크를 열어 실제 위치와 이동 경로를 확인해 주세요.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Closing section -->
+    <section class="contact-cta">
+      <span class="eyebrow" data-i18n="ctaEyebrow">A TABLE FOR YOUR NEXT MOMENT</span>
+      <h2 data-i18n="ctaTitle">맛있는 순간을<br><em>함께 만들어 보세요.</em></h2>
+      <p data-i18n="ctaText">
+        방문 계획이 있으시다면 예약 페이지를 확인해 주세요.
+      </p>
+      <a href="reservation.html" class="gold-button" data-i18n="ctaButton">
+        예약 페이지로 이동 ↗
+      </a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-main">
+      <a href="index.html" class="footer-brand">
+        <span class="footer-logo" aria-hidden="true">食</span>
+        <span>
+          <strong data-i18n="brandName">덕수파스타 순천</strong>
+          <small data-i18n="brandTagline">좋은 음식, 따뜻한 순간</small>
+        </span>
+      </a>
+
+      <p class="footer-message" data-i18n="footerMessage">
+        한 접시의 정성, 오래 남는 따뜻한 기억.
+      </p>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html" data-i18n="navHome">홈</a>
+        <a href="menu.html" data-i18n="navMenu">메뉴</a>
+        <a href="reservation.html" data-i18n="navReservation">예약</a>
+        <a href="about.html" data-i18n="navAbout">소개</a>
+        <a href="contact.html" data-i18n="navContact">오시는 길</a>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="currentYear"></span> <span data-i18n="brandName">덕수파스타 순천</span></span>
+      <span data-i18n="footerCopyright">정성과 진심으로 준비합니다.</span>
+    </div>
+  </footer>
+</body>
+</html>

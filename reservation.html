@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173d30">
+  <meta name="description" content="Request a table reservation at Deoksu Pasta Suncheon.">
+
+  <title>Reservation | 덕수파스타 순천</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/reservation.css" type="text/css">
+  <script src="css/js/reservation.js" defer></script>
+</head>
+<body>
+  <div class="announcement" data-i18n="announcement">
+    A beautiful meal begins with a reservation.
+  </div>
+
+  <header class="header">
+    <a href="index.html" class="brand" aria-label="Deoksu Pasta home">
+      <span class="brand-logo" aria-hidden="true">
+        <svg viewBox="0 0 100 100" fill="none">
+          <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="50" cy="50" r="38" stroke="currentColor" stroke-width=".7" stroke-dasharray="2 4"/>
+          <path d="M25 39 C40 28 60 28 75 39" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M25 47 C40 36 60 36 75 47" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M25 55 C40 44 60 44 75 55" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M32 64 C42 73 58 73 68 64" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="50" cy="18" r="2" fill="currentColor"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <strong>덕수파스타 순천</strong>
+        <small>DEOKSU PASTA · SUNCHEON</small>
+      </span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Open navigation"
+      aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="mainNav" aria-label="Main navigation">
+      <a href="index.html" data-i18n="navHome">Home</a>
+      <a href="menu.html" data-i18n="navMenu">Menu</a>
+      <a href="reservation.html" class="active" data-i18n="navReservation">Reservation</a>
+      <a href="about.html" data-i18n="navAbout">About Us</a>
+      <a href="contact.html" data-i18n="navContact">Contact</a>
+      <button class="language-button" id="languageToggle" type="button">한국어</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="reservation-hero">
+      <img
+        src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1900&q=85"
+        alt="An elegant restaurant table set for a meal"
+        class="hero-image"
+      >
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <p class="eyebrow" data-i18n="heroEyebrow">YOUR TABLE IS WAITING</p>
+        <h1 data-i18n="heroTitle">Make room for<br><em>something wonderful.</em></h1>
+        <p data-i18n="heroDescription">
+          A lovely meal, good company, and moments worth remembering.
+          Let us know when you would like to visit.
+        </p>
+        <a href="#booking" class="button button-gold">
+          <span data-i18n="startBooking">Request a Reservation</span>
+          <span aria-hidden="true">↓</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="booking-section" id="booking">
+      <div class="booking-layout">
+        <div class="booking-intro">
+          <p class="eyebrow dark-eyebrow" data-i18n="formEyebrow">LET'S PLAN YOUR VISIT</p>
+          <h2 data-i18n="formTitle">A table for<br><em>your special moment.</em></h2>
+          <p data-i18n="formDescription">
+            Tell us a little about your visit. Submit your request and
+            the restaurant can follow up to confirm availability.
+          </p>
+
+          <div class="booking-note">
+            <span class="note-icon">✳</span>
+            <div>
+              <h3 data-i18n="noteTitle">A little note</h3>
+              <p data-i18n="noteText">
+                Your request is not a confirmed booking until the restaurant
+                confirms it with you.
+              </p>
+            </div>
+          </div>
+
+          <div class="quote-card">
+            <span class="quote-mark">“</span>
+            <p data-i18n="quote">
+              Good food tastes even better when shared with people you love.
+            </p>
+            <span class="quote-korean">좋은 음식, 행복한 순간.</span>
+          </div>
+        </div>
+
+        <div class="booking-card">
+          <div class="card-heading">
+            <div>
+              <p class="eyebrow dark-eyebrow" data-i18n="cardEyebrow">DEOKSU PASTA · SUNCHEON</p>
+              <h2 data-i18n="cardTitle">Reservation Request</h2>
+            </div>
+            <span class="card-symbol" aria-hidden="true">✳</span>
+          </div>
+
+          <form id="reservationForm">
+            <div class="form-grid">
+              <div class="field">
+                <label for="fullName" data-i18n="nameLabel">Your name *</label>
+                <input id="fullName" name="name" type="text"
+                  autocomplete="name" required maxlength="80"
+                  placeholder="Enter your name"
+                  data-i18n-placeholder="namePlaceholder">
+              </div>
+
+              <div class="field">
+                <label for="phone" data-i18n="phoneLabel">Phone number *</label>
+                <input id="phone" name="phone" type="tel"
+                  autocomplete="tel" required maxlength="30"
+                  placeholder="Enter your phone number"
+                  data-i18n-placeholder="phonePlaceholder">
+              </div>
+
+              <div class="field">
+                <label for="email" data-i18n="emailLabel">Email address</label>
+                <input id="email" name="email" type="email"
+                  autocomplete="email" maxlength="120"
+                  placeholder="you@example.com"
+                  data-i18n-placeholder="emailPlaceholder">
+              </div>
+
+              <div class="field">
+                <label for="guests" data-i18n="guestsLabel">Number of guests *</label>
+                <select id="guests" name="guests" required>
+                  <option value="1" data-i18n="guest1">1 guest</option>
+                  <option value="2" selected data-i18n="guest2">2 guests</option>
+                  <option value="3" data-i18n="guest3">3 guests</option>
+                  <option value="4" data-i18n="guest4">4 guests</option>
+                  <option value="5" data-i18n="guest5">5 guests</option>
+                  <option value="6" data-i18n="guest6">6 guests</option>
+                  <option value="7" data-i18n="guest7">7 guests</option>
+                  <option value="8" data-i18n="guest8">8 guests</option>
+                  <option value="9+" data-i18n="guestLarge">9+ guests</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="date" data-i18n="dateLabel">Preferred date *</label>
+                <input id="date" name="date" type="date" required>
+              </div>
+
+              <div class="field">
+                <label for="time" data-i18n="timeLabel">Preferred time *</label>
+                <select id="time" name="time" required>
+                  <option value="" data-i18n="timePlaceholder">Choose a time</option>
+                  <option value="11:00">11:00 AM</option>
+                  <option value="11:30">11:30 AM</option>
+                  <option value="12:00">12:00 PM</option>
+                  <option value="12:30">12:30 PM</option>
+                  <option value="13:00">1:00 PM</option>
+                  <option value="13:30">1:30 PM</option>
+                  <option value="14:00">2:00 PM</option>
+                  <option value="17:00">5:00 PM</option>
+                  <option value="17:30">5:30 PM</option>
+                  <option value="18:00">6:00 PM</option>
+                  <option value="18:30">6:30 PM</option>
+                  <option value="19:00">7:00 PM</option>
+                  <option value="19:30">7:30 PM</option>
+                  <option value="20:00">8:00 PM</option>
+                  <option value="20:30">8:30 PM</option>
+                </select>
+              </div>
+
+              <div class="field full-width">
+                <label for="occasion" data-i18n="occasionLabel">Occasion (optional)</label>
+                <select id="occasion" name="occasion">
+                  <option value="" data-i18n="occasionNone">Just a meal together</option>
+                  <option value="Birthday" data-i18n="occasionBirthday">Birthday</option>
+                  <option value="Anniversary" data-i18n="occasionAnniversary">Anniversary</option>
+                  <option value="Date" data-i18n="occasionDate">Date night</option>
+                  <option value="Family" data-i18n="occasionFamily">Family gathering</option>
+                  <option value="Business" data-i18n="occasionBusiness">Business meal</option>
+                  <option value="Other" data-i18n="occasionOther">Other</option>
+                </select>
+              </div>
+
+              <div class="field full-width">
+                <label for="requests" data-i18n="requestsLabel">Special requests</label>
+                <textarea id="requests" name="requests" rows="4"
+                  maxlength="700"
+                  placeholder="Allergies, seating preferences, or other notes..."
+                  data-i18n-placeholder="requestsPlaceholder"></textarea>
+              </div>
+            </div>
+
+            <label class="consent">
+              <input type="checkbox" id="consent" required>
+              <span data-i18n="consentText">
+                I agree that the restaurant may contact me about this reservation request. *
+              </span>
+            </label>
+
+            <button type="submit" class="button button-submit">
+              <span data-i18n="submitButton">Send Reservation Request</span>
+              <span aria-hidden="true">↗</span>
+            </button>
+
+            <p class="form-footnote" data-i18n="formFootnote">
+              Please wait for the restaurant to confirm your requested date and time.
+            </p>
+
+            <div id="formMessage" class="form-message" role="status" aria-live="polite" hidden></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps-section">
+      <div class="steps-heading">
+        <p class="eyebrow dark-eyebrow" data-i18n="stepsEyebrow">SIMPLE & THOUGHTFUL</p>
+        <h2 data-i18n="stepsTitle">Your visit, <em>made easy.</em></h2>
+      </div>
+
+      <div class="steps-grid">
+        <article class="step">
+          <span class="step-number">01</span>
+          <h3 data-i18n="stepOneTitle">Tell us your plans</h3>
+          <p data-i18n="stepOneText">Choose your date, time, and number of guests.</p>
+        </article>
+        <article class="step">
+          <span class="step-number">02</span>
+          <h3 data-i18n="stepTwoTitle">Send your request</h3>
+          <p data-i18n="stepTwoText">Share your contact details and any special notes.</p>
+        </article>
+        <article class="step">
+          <span class="step-number">03</span>
+          <h3 data-i18n="stepThreeTitle">Wait for confirmation</h3>
+          <p data-i18n="stepThreeText">The restaurant must confirm availability before your booking is final.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="closing">
+      <p class="eyebrow" data-i18n="closingEyebrow">WE LOOK FORWARD TO WELCOMING YOU</p>
+      <h2 data-i18n="closingTitle">좋은 음식, <em>행복한 순간.</em></h2>
+      <p data-i18n="closingText">Thank you for choosing Deoksu Pasta Suncheon.</p>
+      <a href="menu.html" class="button button-gold">
+        <span data-i18n="seeMenu">Explore the Menu</span>
+        <span aria-hidden="true">↗</span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-main">
+      <a href="index.html" class="brand footer-brand">
+        <span class="brand-logo" aria-hidden="true">
+          <svg viewBox="0 0 100 100" fill="none">
+            <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="50" cy="50" r="38" stroke="currentColor" stroke-width=".7" stroke-dasharray="2 4"/>
+            <path d="M25 39 C40 28 60 28 75 39" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M25 47 C40 36 60 36 75 47" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M25 55 C40 44 60 44 75 55" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M32 64 C42 73 58 73 68 64" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong>덕수파스타 순천</strong>
+          <small>DEOKSU PASTA · SUNCHEON</small>
+        </span>
+      </a>
+
+      <p class="footer-message" data-i18n="footerMessage">Good food brings us together.</p>
+
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html" data-i18n="navHome">Home</a>
+        <a href="menu.html" data-i18n="navMenu">Menu</a>
+        <a href="reservation.html" data-i18n="navReservation">Reservation</a>
+        <a href="about.html" data-i18n="navAbout">About Us</a>
+        <a href="contact.html" data-i18n="navContact">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Deoksu Pasta Suncheon.</span>
+      <span data-i18n="footerNote">Made with care. Shared with love.</span>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+</body>
+</html>

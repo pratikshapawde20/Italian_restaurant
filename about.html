@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173d32">
+
+  <title>About Us | 덕수파스타 순천</title>
+  <meta name="description" content="Discover our restaurant story, Korean food philosophy, and passion for bringing people together around the table.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/about.css" type="text/css">
+  <script src="css/js/about.js" defer></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <a href="index.html" class="brand" aria-label="Restaurant home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 50 50" fill="none">
+          <circle cx="25" cy="25" r="23" stroke="currentColor" stroke-width="1.3"/>
+          <path d="M12 19H38M15 23H35M18 27H32" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M18 13C15 9 22 8 19 5M26 13C23 9 30 8 27 5M34 13C31 9 38 8 35 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <path d="M14 32C19 39 31 39 36 32" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <strong data-i18n="brandName">덕수파스타 순천</strong>
+        <small data-i18n="brandTagline">좋은 음식, 따뜻한 순간</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Open navigation" aria-expanded="false"
+      aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html" data-i18n="navHome">홈</a>
+      <a href="menu.html" data-i18n="navMenu">메뉴</a>
+      <a href="reservation.html" data-i18n="navReservation">예약</a>
+      <a href="about.html" class="active" aria-current="page" data-i18n="navAbout">소개</a>
+      <a href="contact.html" data-i18n="navContact">오시는 길</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="language-button" id="languageToggle" type="button"
+        aria-label="Switch language">
+        <span id="languageLabel">ENGLISH</span>
+        <span class="language-globe" aria-hidden="true">◎</span>
+      </button>
+      <a class="header-reserve" href="reservation.html" data-i18n="bookTable">예약하기</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="about-hero">
+      <div class="hero-image" role="img"
+        aria-label="Warm restaurant dining atmosphere"></div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <span class="eyebrow" data-i18n="heroEyebrow">OUR STORY · 우리의 이야기</span>
+        <h1 data-i18n="heroTitle">음식으로 이어지는<br><em>따뜻한 인연</em></h1>
+        <p data-i18n="heroText">
+          좋은 음식은 사람을 모으고, 함께한 순간은 오래도록 기억됩니다.
+        </p>
+        <a href="#our-story" class="gold-link">
+          <span data-i18n="discoverStory">우리의 이야기</span>
+          <span aria-hidden="true">↘</span>
+        </a>
+      </div>
+
+      <div class="hero-side-note" data-i18n="heroSideNote">
+        좋은 재료 · 정성스러운 한 접시
+      </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="intro-section section-padding" id="our-story">
+      <div class="section-label">
+        <span>01</span>
+        <span data-i18n="sectionStory">OUR STORY</span>
+      </div>
+
+      <div class="intro-grid">
+        <div class="intro-heading">
+          <p class="eyebrow dark-eyebrow" data-i18n="storyEyebrow">MORE THAN A MEAL</p>
+          <h2 data-i18n="storyTitle">
+            한 끼의 식사를 넘어,<br>
+            <em>마음에 남는 경험</em>
+          </h2>
+          <div class="gold-line"></div>
+        </div>
+
+        <div class="intro-copy">
+          <p data-i18n="storyParagraph1">
+            저희는 음식이 단순히 배를 채우는 것을 넘어,
+            사람과 사람을 이어 주는 특별한 경험이라고 믿습니다.
+          </p>
+          <p data-i18n="storyParagraph2">
+            정성스럽게 준비한 음식, 편안한 공간, 그리고 따뜻한 환대.
+            이 작은 것들이 모여 여러분의 하루에 기분 좋은 순간을
+            더할 수 있기를 바랍니다.
+          </p>
+          <p data-i18n="storyParagraph3">
+            소중한 사람과의 식사부터 혼자만의 여유로운 시간까지,
+            누구나 편안하게 머물 수 있는 공간을 만들어 갑니다.
+          </p>
+          <span class="signature" data-i18n="signature">정성을 담아, 진심을 전합니다.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image feature -->
+    <section class="feature-section">
+      <div class="feature-image">
+        <img
+          src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1400&q=85"
+          alt="Carefully prepared food served at a table"
+          loading="lazy">
+      </div>
+      <div class="feature-content">
+        <span class="eyebrow" data-i18n="featureEyebrow">OUR PHILOSOPHY</span>
+        <h2 data-i18n="featureTitle">좋은 음식에는<br><em>마음이 담깁니다</em></h2>
+        <p data-i18n="featureText">
+          재료를 소중히 여기고, 맛의 균형을 생각하며,
+          한 접시마다 정성을 담습니다. 화려함보다 진심을,
+          서두름보다 세심함을 중요하게 생각합니다.
+        </p>
+        <a href="menu.html" class="outline-link">
+          <span data-i18n="exploreMenu">메뉴 살펴보기</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="values-section section-padding">
+      <div class="center-heading">
+        <span class="eyebrow dark-eyebrow" data-i18n="valuesEyebrow">WHAT MATTERS TO US</span>
+        <h2 data-i18n="valuesTitle">우리가 소중히 여기는 것</h2>
+        <p data-i18n="valuesSubtitle">모든 방문에 담고 싶은 세 가지 마음</p>
+      </div>
+
+      <div class="values-grid">
+        <article class="value-card">
+          <span class="value-number">01</span>
+          <div class="value-icon" aria-hidden="true">✳</div>
+          <h3 data-i18n="value1Title">정직한 재료</h3>
+          <p data-i18n="value1Text">
+            재료 본연의 맛을 존중하고, 한 접시를 준비하는 모든 과정에
+            세심한 마음을 담습니다.
+          </p>
+        </article>
+
+        <article class="value-card featured-value">
+          <span class="value-number">02</span>
+          <div class="value-icon" aria-hidden="true">◌</div>
+          <h3 data-i18n="value2Title">따뜻한 환대</h3>
+          <p data-i18n="value2Text">
+            처음 방문하는 분도 다시 찾아 주시는 분도
+            편안하게 머물 수 있도록 정성을 다합니다.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <span class="value-number">03</span>
+          <div class="value-icon" aria-hidden="true">♡</div>
+          <h3 data-i18n="value3Title">함께하는 순간</h3>
+          <p data-i18n="value3Text">
+            맛있는 음식과 좋은 대화가 어우러져
+            오래 기억할 식사 시간이 되기를 바랍니다.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery-section section-padding">
+      <div class="gallery-heading">
+        <div>
+          <span class="eyebrow dark-eyebrow" data-i18n="galleryEyebrow">A GLIMPSE OF US</span>
+          <h2 data-i18n="galleryTitle">식탁 위의 작은 순간들</h2>
+        </div>
+        <p data-i18n="galleryText">
+          음식과 공간, 그리고 함께하는 시간.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        <figure class="gallery-item gallery-large">
+          <img
+            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=85"
+            alt="Restaurant table prepared for dining"
+            loading="lazy">
+          <figcaption data-i18n="galleryCaption1">함께 나누는 식사</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img
+            src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85"
+            alt="Freshly prepared food"
+            loading="lazy">
+          <figcaption data-i18n="galleryCaption2">정성을 담은 한 접시</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img
+            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=85"
+            alt="Welcoming restaurant interior"
+            loading="lazy">
+          <figcaption data-i18n="galleryCaption3">편안한 공간</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Closing CTA -->
+    <section class="closing-section">
+      <div class="closing-decoration" aria-hidden="true">食</div>
+      <span class="eyebrow" data-i18n="closingEyebrow">YOUR TABLE IS WAITING</span>
+      <h2 data-i18n="closingTitle">다음 식사는<br><em>저희와 함께하세요.</em></h2>
+      <p data-i18n="closingText">
+        소중한 분들과 함께할 따뜻한 시간을 준비하겠습니다.
+      </p>
+      <div class="closing-actions">
+        <a href="reservation.html" class="gold-button" data-i18n="closingBook">테이블 예약하기</a>
+        <a href="contact.html" class="text-link" data-i18n="closingContact">문의하기 ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-main">
+      <a href="index.html" class="footer-brand">
+        <span class="footer-logo" aria-hidden="true">食</span>
+        <span>
+          <strong data-i18n="brandName">덕수파스타 순천</strong>
+          <small data-i18n="footerTagline">좋은 음식, 따뜻한 순간</small>
+        </span>
+      </a>
+
+      <p class="footer-message" data-i18n="footerMessage">
+        한 접시의 정성, 오래 남는 따뜻한 기억.
+      </p>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html" data-i18n="navHome">홈</a>
+        <a href="menu.html" data-i18n="navMenu">메뉴</a>
+        <a href="reservation.html" data-i18n="navReservation">예약</a>
+        <a href="about.html" data-i18n="navAbout">소개</a>
+        <a href="contact.html" data-i18n="navContact">오시는 길</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="currentYear"></span> <span data-i18n="brandName">덕수파스타 순천</span></span>
+      <span data-i18n="footerCopyright">정성과 진심으로 준비합니다.</span>
+    </div>
+  </footer>
+</body>
+</html>

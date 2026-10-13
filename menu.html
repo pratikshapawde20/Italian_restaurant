@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173d30">
+  <title>Menu | 덕수파스타 순천</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/menu.css" type="text/css">
+  <script src="css/js/menu.js" defer></script>
+</head>
+<body>
+  <div class="top-note" data-i18n="topNote">
+    A little Italian comfort, served with Korean warmth.
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">
+        <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <circle cx="32" cy="32" r="29" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="32" cy="32" r="23" stroke="currentColor" stroke-dasharray="2 3"/>
+          <path d="M18 20c12 2 15 9 27 6M16 27c13 2 18 11 31 7M18 35c10 1 16 10 27 7M22 42c7 1 12 5 19 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="46" cy="43" r="3" fill="#c9a45f"/>
+        </svg>
+      </span>
+      <span class="brand-words">
+        <strong>덕수파스타 순천</strong>
+        <small>DEOKSU PASTA · SUNCHEON</small>
+      </span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Open navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html" data-i18n="navHome">Home</a>
+      <a href="menu.html" class="active" data-i18n="navMenu">Menu</a>
+      <a href="reservation.html" data-i18n="navReservation">Reservation</a>
+      <a href="about.html" data-i18n="navAbout">About Us</a>
+      <a href="contact.html" data-i18n="navContact">Contact</a>
+      <button class="language-button" id="languageToggle">한국어</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="menu-hero">
+      <img class="hero-photo"
+        src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=2000&q=85"
+        alt="Fresh pasta served at a restaurant">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow" data-i18n="heroEyebrow">MADE TO BE SHARED</p>
+        <h1 data-i18n="heroTitle">Good food.<br><em>Beautiful moments.</em></h1>
+        <p data-i18n="heroText">
+          From creamy pasta to sizzling steak, find your next favourite at Deoksu Pasta.
+        </p>
+        <a class="hero-cta" href="#menu-start">
+          <span data-i18n="exploreMenu">Explore the menu</span>
+          <b>↓</b>
+        </a>
+      </div>
+      <div class="hero-bottom">
+        <span>덕수파스타 순천</span>
+        <span>MENU · 2026</span>
+      </div>
+    </section>
+
+    <section class="intro-strip">
+      <span class="ornament">✳</span>
+      <p data-i18n="introText">
+        Thoughtfully prepared comfort food, made for the moments that bring people together.
+      </p>
+      <span class="ornament">✳</span>
+    </section>
+
+    <section class="menu-section" id="menu-start">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow dark-eyebrow" data-i18n="sectionEyebrow">FIND YOUR FAVOURITE</p>
+          <h2 data-i18n="sectionTitle">Our Menu</h2>
+        </div>
+        <p class="section-description" data-i18n="sectionDescription">
+          Explore our pasta, risotto, steak, salads and refreshing drinks.
+        </p>
+      </div>
+
+      <div class="menu-toolbar">
+        <label class="search-box">
+          <span>⌕</span>
+          <input id="menuSearch" type="search"
+            data-i18n-placeholder="searchPlaceholder"
+            placeholder="Search dishes...">
+          <button id="clearSearch" type="button" aria-label="Clear search" hidden>×</button>
+        </label>
+
+        <div class="category-filters" id="categoryFilters">
+          <button class="filter-chip active" data-category="all" data-i18n="catAll">All dishes</button>
+          <button class="filter-chip" data-category="pasta" data-i18n="catPasta">Pasta</button>
+          <button class="filter-chip" data-category="risotto" data-i18n="catRisotto">Risotto & rice</button>
+          <button class="filter-chip" data-category="steak" data-i18n="catSteak">Steak & mains</button>
+          <button class="filter-chip" data-category="salad" data-i18n="catSalad">Salad & sides</button>
+          <button class="filter-chip" data-category="drink" data-i18n="catDrinks">Drinks</button>
+        </div>
+      </div>
+
+      <div class="results-line">
+        <span id="resultsCount" aria-live="polite">All menu items</span>
+        <span data-i18n="priceNote">Prices shown in Korean won (₩).</span>
+      </div>
+
+      <div class="menu-grid" id="menuGrid"></div>
+
+      <div class="no-results" id="noResults" hidden>
+        <span>⌕</span>
+        <h3 data-i18n="noResultsTitle">No dishes found</h3>
+        <p data-i18n="noResultsText">Try another search or choose a different category.</p>
+        <button class="reset-button" id="resetFilters" data-i18n="resetFilters">Reset filters</button>
+      </div>
+
+      <p class="menu-disclaimer" data-i18n="disclaimer">
+        Menu items and prices are transcribed from the supplied menu screenshots.
+        Please confirm current availability, ingredients and prices with the restaurant.
+        Food photos are illustrative.
+      </p>
+    </section>
+
+    <section class="menu-quote">
+      <div class="quote-decoration">“</div>
+      <p data-i18n="quote">
+        Every plate is an invitation to slow down, share a little more, and enjoy the moment.
+      </p>
+      <span data-i18n="quoteKorean">좋은 음식과 좋은 사람, 함께하는 따뜻한 순간.</span>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <a class="brand footer-brand" href="index.html">
+        <span class="brand-mark">
+          <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <circle cx="32" cy="32" r="29" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M18 20c12 2 15 9 27 6M16 27c13 2 18 11 31 7M18 35c10 1 16 10 27 7M22 42c7 1 12 5 19 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="46" cy="43" r="3" fill="#c9a45f"/>
+          </svg>
+        </span>
+        <span class="brand-words">
+          <strong>덕수파스타 순천</strong>
+          <small>DEOKSU PASTA · SUNCHEON</small>
+        </span>
+      </a>
+
+      <p data-i18n="footerPhrase">Good food, good company, and a table waiting for you.</p>
+
+      <div class="footer-links">
+        <a href="index.html" data-i18n="navHome">Home</a>
+        <a href="menu.html" data-i18n="navMenu">Menu</a>
+        <a href="reservation.html" data-i18n="navReservation">Reservation</a>
+        <a href="about.html" data-i18n="navAbout">About Us</a>
+        <a href="contact.html" data-i18n="navContact">Contact</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> 덕수파스타 순천</span>
+      <span data-i18n="footerNote">Prepared with care. Served with warmth.</span>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+</body>
+</html>
